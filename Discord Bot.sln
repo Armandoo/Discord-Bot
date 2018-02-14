@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discord Bot", "Discord Bot\Discord Bot.csproj", "{C5272259-973D-428F-9D0B-7F2DF6CD9EF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discord Bot", "Discord Bot\Discord Bot.csproj", "{C5272259-973D-428F-9D0B-7F2DF6CD9EF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{699DA499-3681-49DC-89A9-44273D055C4C}"
+	ProjectSection(SolutionItems) = preProject
+		InputHandler.cs = InputHandler.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F8CD4C1-779E-4893-8301-794D06B15DF1}
 	EndGlobalSection
 EndGlobal

@@ -27,6 +27,7 @@ namespace Discord_Bot
 
             // Block this task until the program is closed.
             await Task.Delay(-1);
+            string i = Console.ReadLine();
         }
         private Task Log(LogMessage msg)
         {
