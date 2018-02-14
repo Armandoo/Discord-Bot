@@ -44,6 +44,11 @@ namespace Discord_Bot
                 await message.Channel.SendMessageAsync("TURK TURK TURK!");
 
             }
+            else if (message.Content == "!wiebenik")
+            {
+                await message.Channel.SendMessageAsync(message.Author.Username);
+                await message.Channel.SendMessageAsync("message testing");
+            }
         }
     }
 }
