@@ -20,7 +20,8 @@ namespace Discord_Bot
             _client = new DiscordSocketClient();
 
             _client.Log += Log;
-            
+            _client.MessageReceived += MessageReceived;
+
             await _client.LoginAsync(TokenType.Bot, _token);
             await _client.StartAsync();
 
@@ -31,6 +32,18 @@ namespace Discord_Bot
         {
             Console.WriteLine(msg.ToString());
             return Task.CompletedTask;
+        }
+
+        private async Task MessageReceived(SocketMessage message)
+        {
+            if (message.Content == "!ping")
+            {
+                await message.Channel.SendMessageAsync("Pong!");
+            }else if (message.Content == "!ikben")
+            {
+                await message.Channel.SendMessageAsync("TURK TURK TURK!");
+
+            }
         }
     }
 }
