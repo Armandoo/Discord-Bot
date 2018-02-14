@@ -20,9 +20,8 @@ namespace Discord_Bot
             _client = new DiscordSocketClient();
 
             _client.Log += Log;
-
-            string token = "abcdefg..."; // Remember to keep this private!
-            await _client.LoginAsync(TokenType.Bot, token);
+            
+            await _client.LoginAsync(TokenType.Bot, _token);
             await _client.StartAsync();
 
             // Block this task until the program is closed.
