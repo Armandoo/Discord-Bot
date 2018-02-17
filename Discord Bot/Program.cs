@@ -10,13 +10,9 @@ namespace Discord_Bot
 {
     class Program { 
 
-
-        private readonly string _token = "NDEzMzM1MjI5NTUwNTU5MjM1.DWXUCw.UNwIIdRpImlTDPB9swwhpxkF_J0";
-
         private DiscordSocketClient _client;
         private CommandService _commands;
         private IServiceProvider _services;
-
 
         public static void Main(string[] args) => new Program().MainAsync().GetAwaiter().GetResult();
 
@@ -36,7 +32,10 @@ namespace Discord_Bot
 
             await RegisterCommandsAsync();
 
-            await _client.LoginAsync(TokenType.Bot, _token);
+
+            var token = System.IO.File.ReadAllText(@"..\token.txt");
+
+            await _client.LoginAsync(TokenType.Bot, token);
 
             await _client.StartAsync();
 
