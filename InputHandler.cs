@@ -1,8 +1,29 @@
 ﻿using System;
 
-public class Class1
+public class InputHandler
 {
-	public Class1()
-	{
-	}
+    string input = input;
+    
+    public InputHandler(string input)
+    {
+        this.input = input;
+    }
+
+    public void input()
+    {
+        if (input == "!ping")
+        {
+            await message.Channel.SendMessageAsync("Pong!");
+        }
+        else if (input == "!ikben")
+        {
+            await message.Channel.SendMessageAsync("TURK TURK TURK!");
+
+        }
+        else if (input == "!wiebenik")
+        {
+            await message.Channel.SendMessageAsync(message.Author.Username);
+            await message.Channel.SendMessageAsync("message testing");
+        }
+    }
 }
