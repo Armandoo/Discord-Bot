@@ -68,7 +68,7 @@ namespace Discord_Bot
 
             int argPos = 0;
 
-            if(message.HasStringPrefix("!",ref argPos) || message.HasMentionPrefix(_client.CurrentUser, ref argPos))
+            if(message.HasStringPrefix("!", ref argPos) || message.HasMentionPrefix(_client.CurrentUser, ref argPos))
             {
                 var context = new SocketCommandContext(_client, message);
 

@@ -18,6 +18,10 @@ namespace Discord_Bot.Modules
                 .AddInlineField("Field two","inline field")
                 .AddInlineField("Field three", "also an inline field");
 
+            builder.Title = "Hammer is ya boi";
+            builder.ImageUrl = "https://placeimg.com/640/480/tech";
+
+
             await ReplyAsync("", false, builder.Build());
         }
     }
